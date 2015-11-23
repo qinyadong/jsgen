@@ -1,0 +1,7 @@
+cd ~/Desktop/git_repo/jsgen/
+git status
+git pull
+git add . 
+git commit -m "一键提交"
+git push origin master
+

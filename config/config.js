@@ -52,7 +52,7 @@ module.exports = {
     clearSessionSetInteval: 1000*60*60, //自动清理垃圾session时间，建设设置为1小时
     clearSessionTime: 1000*60*60*24,//会话session超时，建议设置为1天
 //session内存存储
-    sessionDbStore: false,//是否使用mongodb数据库存储session，如果设置为true，则不需要同步session
+    sessionDbStore: true,//是否使用mongodb数据库存储session，如果设置为true，则不需要同步session
 //deflate和gzip配置
     isZlib: true, //是否开启delate和gizp压缩，大并发压缩虽然可以减少传输字节数，但是会影响性能
     ZlibArray: ['text/plain', 'application/javascript', 'text/css', 'application/xml', 'text/html'], //只压缩数组中的content-type响应
@@ -69,8 +69,8 @@ module.exports = {
     tempCacheTime: 0,//模版缓存时间
     tempCacheFolder: '/tmp/tpl', //模版缓存 存放目录
 //mongodb 配置
-    isMongodb: false, //是否开启mongodb支持，注意：如果使用数据库存储session，这里必须开启
-    MongodbIp: '127.0.0.1', //mongodb地址
+    isMongodb: true, //是否开启mongodb支持，注意：如果使用数据库存储session，这里必须开启
+    MongodbIp: '45.127.97.104', //mongodb地址
     MongodbRC: false,//如果是false表示不使用mongodb的副本集，否则为字符串，表示副本集的名称
     MongodbRChost: [],//表示mongodb副本集的ip:port数组。
     MongodbPort: 27017, //mongodb端口
